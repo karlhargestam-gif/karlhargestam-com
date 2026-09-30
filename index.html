@@ -96,6 +96,7 @@ nav.scrolled .brand,nav.scrolled .links a{color:var(--ink)}
 .frame video{width:100%;height:100%;object-fit:cover;display:block}
 .frame:hover img{transform:scale(1.04)}
 .movement .frame{aspect-ratio:4/5}
+.movement .teamframe{margin-top:clamp(28px,4vw,52px);aspect-ratio:16/9}
 .caption{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:14px}
 .textlink{display:inline-block;margin-top:26px;font-size:12px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--red);padding-bottom:6px;transition:color .3s,border-color .3s}
 .textlink:hover{color:var(--red)}
@@ -127,8 +128,9 @@ nav.scrolled .brand,nav.scrolled .links a{color:var(--ink)}
 .history .hwrap{display:grid;grid-template-columns:1fr 340px;gap:clamp(36px,6vw,84px);align-items:start}
 @media(max-width:900px){.history .hwrap{grid-template-columns:1fr;max-width:560px}}
 .history .frame.portrait{aspect-ratio:3/4}
-.history .strip{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2.4vw,28px);margin-top:clamp(44px,6vw,80px)}
-@media(max-width:700px){.history .strip{grid-template-columns:1fr}}
+.history .strip{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,2.4vw,28px);margin-top:clamp(44px,6vw,80px)}
+@media(max-width:900px){.history .strip{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.history .strip{grid-template-columns:1fr}}
 .history .strip .frame{aspect-ratio:4/3}
 
 /* films */
@@ -244,9 +246,13 @@ footer .base{border-top:1px solid #2c2c2c;padding-top:26px;display:flex;justify-
         <a class="textlink reveal d2" href="https://pcg.org" target="_blank" rel="noopener">pcg.org &rarr;</a>
       </div>
       <div class="reveal d1">
-        <div class="frame"><img src="assets/movement-pcg.jpg" alt="Karl Hargestam at the Pentecostal Church of God offices" loading="lazy"></div>
-        <p class="caption">At the PCG offices &mdash; serving the movement</p>
+        <div class="frame"><img src="assets/crowd-aerial-joshua.jpg" alt="Aerial view of a Joshua Campaign field gathering" loading="lazy"></div>
+        <p class="caption">The movement gathered &mdash; a Joshua Campaign field</p>
       </div>
+    </div>
+    <div class="reveal">
+      <div class="frame teamframe"><img src="assets/team-backs.jpg" alt="Joshua Campaign missionary team" loading="lazy"></div>
+      <p class="caption">The missionary team &mdash; Joshua Campaign</p>
     </div>
   </div>
 </section>
@@ -299,7 +305,7 @@ footer .base{border-top:1px solid #2c2c2c;padding-top:26px;display:flex;justify-
     </div>
     <div class="wide">
       <div class="frame reveal"><video autoplay muted loop playsinline preload="metadata" title="Karl Hargestam in the cockpit"><source src="assets/cockpit-loop.mp4" type="video/mp4"></video></div>
-      <div class="frame reveal d1"><img src="assets/heli-red.jpg" alt="Red Mission One Eleven Aviation helicopter" loading="lazy"></div>
+      <div class="frame reveal d1"><img src="assets/heli-red-n9117m.jpg" alt="Mission One Eleven Aviation helicopter N9117M" loading="lazy"></div>
     </div>
     <p class="caption reveal">In the cockpit &mdash; the pilot in pioneer service</p>
   </div>
@@ -332,9 +338,10 @@ footer .base{border-top:1px solid #2c2c2c;padding-top:26px;display:flex;justify-
     <div class="strip">
       <div class="frame reveal"><img src="assets/hist-tent.jpg" alt="A campaign tent beside a local church" loading="lazy"></div>
       <div class="frame reveal d1"><img src="assets/hist-truck.jpg" alt="Early Joshua Campaign sound-stage truck" loading="lazy"></div>
-      <div class="frame reveal d2"><img src="assets/hist-helimission.jpg" alt="A helicopter landing among a crowd" loading="lazy"></div>
+      <div class="frame reveal d2"><img src="assets/heli-heritage-field.jpg" alt="A helicopter landing among a field crowd" loading="lazy"></div>
+      <div class="frame reveal d3"><img src="assets/billboard-tamil.jpg" alt="A campaign billboard in India" loading="lazy"></div>
     </div>
-    <p class="caption reveal">The early campaigns &mdash; tents, trucks, and rotorcraft</p>
+    <p class="caption reveal">The campaigns &mdash; tents, trucks, rotorcraft, and city streets</p>
   </div>
 </section>
 
@@ -380,6 +387,14 @@ footer .base{border-top:1px solid #2c2c2c;padding-top:26px;display:flex;justify-
       <div class="reveal d1">
         <div class="frame"><img src="assets/door-senate.jpg" alt="California State Senate chamber display welcoming CityServe and Karl Hargestam" loading="lazy"></div>
         <p class="caption">California State Senate &mdash; CityServe recognition</p>
+      </div>
+      <div class="reveal d2">
+        <div class="frame"><img src="assets/flags-table.jpg" alt="United States, Ukraine, and CityServe flags at a table" loading="lazy"></div>
+        <p class="caption">At the table &mdash; the United States, Ukraine, and CityServe</p>
+      </div>
+      <div class="reveal d3">
+        <div class="frame"><img src="assets/tuxedo-podium.jpg" alt="Karl Hargestam addressing a formal gathering" loading="lazy"></div>
+        <p class="caption">A formal address &mdash; received as a servant</p>
       </div>
     </div>
     <p class="note reveal">A statesman is measured by the doors he was trusted to walk through &mdash; and what he carried through them.</p>

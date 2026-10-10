@@ -1,0 +1,19 @@
+name: Site check
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  site-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check page size, canonical URLs, structured data, links, robots and sitemap
+        run: python3 .github/scripts/site_check.py --host www.karlhargestam.com --max-page-kb 1024

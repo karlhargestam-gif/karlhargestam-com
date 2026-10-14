@@ -194,6 +194,10 @@ footer .base{border-top:1px solid #2c2c30;padding-top:24px;display:flex;justify-
 .reveal.in{opacity:1;transform:none}
 .reveal.d1{transition-delay:.1s}.reveal.d2{transition-delay:.2s}.reveal.d3{transition-delay:.3s}
 @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}}
+@media(max-width:600px){
+  .hero .bg video{object-position:30% 50%;filter:saturate(.8) brightness(.42) contrast(1.05)}
+  .hero .shade{background:linear-gradient(180deg,rgba(6,6,8,.72) 0%,rgba(6,6,8,.6) 45%,rgba(6,6,8,.9) 100%)}
+}
 </style>
   <script type="application/ld+json">
   {
@@ -217,9 +221,16 @@ footer .base{border-top:1px solid #2c2c30;padding-top:24px;display:flex;justify-
       }
     },
     "url": "https://www.karlhargestam.com/",
+    "alternateName": "Karl Härgestam",
+    "spouse": { "@type": "Person", "name": "Jennifer Hargestam" },
     "sameAs": [
+      "https://about.me/hargestam",
+      "https://www.linkedin.com/in/karl-hargestam-72327034",
       "https://www.pcgmission.org/",
+      "https://www.pcg.org/about/leadership",
+      "https://www.pcg.org/resource-library/assembly-2025-commissioning-the-hargestams",
       "https://hargestam.online/",
+      "https://grokipedia.com/page/karl-hargestam",
       "https://ocfep.com/"
     ],
     "subjectOf": { "@type": "TVSeries", "@id": "https://www.theassignmentshow.tv/#series", "name": "The Assignment: Ethiopia", "url": "https://www.theassignmentshow.tv/" },
@@ -245,15 +256,15 @@ footer .base{border-top:1px solid #2c2c30;padding-top:24px;display:flex;justify-
 
 <header class="hero" id="top">
   <div class="bg">
-    <video autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg">
-      <source src="https://raw.githubusercontent.com/karlhargestam-gif/karlhargestam-com/main/assets/hero-loop.mp4" type="video/mp4">
+    <video autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg" width="1280" height="720">
+      <source src="assets/hero-loop.mp4" type="video/mp4">
     </video>
   </div>
   <div class="shade"></div>
   <div class="inner wrap">
     <p class="kicker reveal">Global Missions Director &middot; Pentecostal Church of God</p>
     <h1 class="reveal d1">Karl Hargestam</h1>
-    <p class="tri reveal d2">One Mission<span class="dot">&middot;</span>One Movement<span class="dot">&middot;</span>One Chance</p>
+    <p class="tri reveal d2"><span style="white-space:nowrap">One&nbsp;Mission</span><span class="dot">&middot;</span><span style="white-space:nowrap">One&nbsp;Movement</span><span class="dot">&middot;</span><span style="white-space:nowrap">One&nbsp;Chance</span></p>
   </div>
   <div class="scroll">Scroll</div>
 </header>
@@ -268,11 +279,11 @@ footer .base{border-top:1px solid #2c2c30;padding-top:24px;display:flex;justify-
     <p class="lede reveal d1">Karl Hargestam serves as Global Missions Director of the Pentecostal Church of God, strengthening national churches and pioneer teams among the unreached.</p>
     <div class="duo">
       <div class="reveal">
-        <div class="frame wide"><img src="assets/tuxedo-podium.jpg" alt="Karl Hargestam addressing a formal gathering" loading="lazy"></div>
+        <div class="frame wide"><img src="assets/tuxedo-podium.jpg" width="1179" height="787" alt="Karl Hargestam addressing a formal gathering" loading="lazy"></div>
         <p class="caption">A formal address</p>
       </div>
       <div class="reveal d1">
-        <div class="frame tall"><img src="assets/portrait-speaking.jpg" alt="Karl Hargestam speaking" loading="lazy"></div>
+        <div class="frame tall"><img src="assets/portrait-speaking.jpg" width="1170" height="780" alt="Karl Hargestam, PCG Global Missions Director, speaking" loading="lazy"></div>
         <p class="caption">The Global Missions Director</p>
       </div>
     </div>
@@ -309,17 +320,20 @@ footer .base{border-top:1px solid #2c2c30;padding-top:24px;display:flex;justify-
         <div class="sec-head reveal d1" style="margin-bottom:30px">
           <h2>A global fellowship, not a personal platform.</h2>
         </div>
-        <p class="reveal d1">Karl serves the <strong>Pentecostal Church of God</strong> &mdash; a worldwide fellowship whose formal conference family spans <strong>78 nations</strong>, touching almost half the world&rsquo;s nations through a century of planting, training, and shared mission. The research into that footprint continues; only what can be verified is reported.</p>
+        <p class="reveal d1">Karl serves the <strong>Pentecostal Church of God</strong> &mdash; a worldwide fellowship whose formal conference family spans <strong>78 nations</strong>, within a heritage of ministry reaching more than 110 nations that is still being reconciled. Only what can be verified is reported.</p>
+        <p class="reveal d1">One Chance, rooted in his message, &ldquo;One Chance for Every Person,&rdquo; and Operation Uttermost form a global ministry and leadership effort spanning about <strong>110 nations</strong>.</p>
+        <p class="reveal d2">Karl Hargestam is Global Missions Director of the Pentecostal Church of God (PCG), serving together with Jennifer. He oversees PCG Global Missions, including the Pentecostal Theological Consortium (PTC, <a href="https://ptconline.global" target="_blank" rel="noopener">ptconline.global</a>), and is developing Operation Uttermost. He oversees PCG Global Missions, including One Chance, rooted in his message, &ldquo;One Chance for Every Person.&rdquo; He co-founded <a href="https://missiononeeleven.com/" target="_blank" rel="noopener">Mission One Eleven</a> with Jennifer.</p>
         <p class="reveal d2">Growth here is decentralized by conviction: national movements leading their own nations, multiplying churches, training their own workers. <strong>OneChance schools</strong> are now spreading through PCG churches across the nations &mdash; fruit of the movement, belonging to the movement.</p>
+        <p class="reveal d2">One church in the Philippines has seen more than 3,600 baptisms so far, possibly past 5,600 if the baptisms expected in December happen.</p>
         <a class="textlink reveal d2" href="https://pcg.org" target="_blank" rel="noopener">pcg.org &rarr;</a>
       </div>
       <div class="reveal d1">
-        <div class="frame"><img src="https://raw.githubusercontent.com/karlhargestam-gif/karlhargestam-com/main/assets/crowd-aerial-joshua.jpg" alt="Aerial view of a Joshua Campaign field gathering" loading="lazy"></div>
+        <div class="frame"><img src="assets/crowd-aerial-joshua.jpg" width="1179" height="885" alt="Aerial view of a Joshua Campaign field gathering" loading="lazy"></div>
         <p class="caption">The movement gathered &mdash; a Joshua Campaign field</p>
       </div>
     </div>
     <div class="reveal">
-      <div class="frame teamframe"><img src="https://raw.githubusercontent.com/karlhargestam-gif/karlhargestam-com/main/assets/team-backs.jpg" alt="Joshua Campaign missionary team" loading="lazy"></div>
+      <div class="frame teamframe"><img src="assets/team-backs.jpg" width="1179" height="883" alt="Joshua Campaign missionary team" loading="lazy"></div>
       <p class="caption">The missionary team &mdash; Joshua Campaign</p>
     </div>
   </div>
@@ -355,13 +369,13 @@ footer .base{border-top:1px solid #2c2c30;padding-top:24px;display:flex;justify-
       <div class="card reveal d1">
         <p class="num">No. 4</p>
         <h3>Innovation for the Assignment</h3>
-        <p>Tools for the work: the OCFEP app, Hero Network, and PrayerPocket &mdash; and reverse-supply-chain systems that turn commerce into compassion.</p>
-        <a class="go" href="https://ocfep.com" target="_blank" rel="noopener">ocfep.com &rarr;</a>
+        <p>Ministry history. Tools for the work: the OCFEP app, Hero Network, and PrayerPocket &mdash; and reverse-supply-chain systems that turn commerce into compassion.</p>
+        <a class="go" href="https://ocfep.com" target="_blank" rel="noopener nofollow">ocfep.com &rarr;</a>
       </div>
       <div class="card reveal">
         <p class="num">No. 5</p>
         <h3>CityServe</h3>
-        <p>Co-founder, 2018&ndash;2025. The Church united to serve its city &mdash; compassion at a scale only the whole Body can carry.</p>
+        <p>Ministry history. Co-founder and former Executive Director of CityServe, 2018&ndash;2025. The Church united to serve its city &mdash; compassion at a scale only the whole Body can carry.</p>
         <a class="go" href="https://cityservenetwork.com/" target="_blank" rel="noopener">cityservenetwork.com &rarr;</a>
       </div>
       <div class="card reveal d1">
@@ -372,8 +386,8 @@ footer .base{border-top:1px solid #2c2c30;padding-top:24px;display:flex;justify-
       </div>
     </div>
     <div class="wide">
-      <div class="frame reveal"><video autoplay muted loop playsinline preload="metadata" title="Karl Hargestam in the cockpit"><source src="https://raw.githubusercontent.com/karlhargestam-gif/karlhargestam-com/main/assets/cockpit-loop.mp4" type="video/mp4"></video></div>
-      <div class="frame reveal d1"><img src="https://raw.githubusercontent.com/karlhargestam-gif/karlhargestam-com/main/assets/heli-red-n9117m.jpg" alt="Mission One Eleven Aviation helicopter N9117M" loading="lazy"></div>
+      <div class="frame reveal"><video autoplay muted loop playsinline preload="metadata" width="960" height="540" title="Karl Hargestam in the cockpit"><source src="assets/cockpit-loop.mp4" type="video/mp4"></video></div>
+      <div class="frame reveal d1"><img src="assets/heli-red-n9117m.jpg" width="1179" height="885" alt="Mission One Eleven Aviation helicopter N9117M" loading="lazy"></div>
     </div>
     <p class="caption reveal">In the cockpit &mdash; the pilot in pioneer service</p>
   </div>
@@ -395,20 +409,20 @@ footer .base{border-top:1px solid #2c2c30;padding-top:24px;display:flex;justify-
       <div class="tl-item reveal"><p class="when">1998</p><p><strong>Founded Joshua Campaign International</strong>; the first campaigns in Ethiopia. 4.2 million recorded decisions for Christ, and from 2007 an AStar helicopter serving Joshua Campaign Ethiopia, operated by Helimission.</p></div><div class="tl-item reveal"><p class="when">1999&ndash;2009</p><p><strong>Area supervisor, Pentecostal Church of God.</strong> Planted and established churches and denominations in Ethiopia and Kenya.</p></div>
       <div class="tl-item reveal"><p class="when">OCFEP</p><p><strong>Founded One Chance for Every Person</strong>, serving as its president, the guiding light through every assignment.</p></div>
       <div class="tl-item reveal"><p class="when">2008&ndash;2019</p><p><strong>Founder and co-owner, Joshua Flower Farms, Ethiopia.</strong> Commercial flower exports funding local church planters in the Horn of Africa.</p></div><div class="tl-item reveal"><p class="when">2010</p><p><strong>Founded Mission One Eleven</strong>; Founder, President and CEO. Expeditions, training, and aviation, flying the BO&nbsp;105.</p></div><div class="tl-item reveal"><p class="when">2016&ndash;2017</p><p><strong>Head of Mission, Swedish Pingst.</strong> Strategic oversight realigning national mission toward unreached peoples.</p></div>
-      <div class="tl-item reveal"><p class="when">2018&ndash;2025</p><p><strong>Co-founded CityServe</strong>, the Church united to serve its city; compassion at a scale only the whole Body can carry.</p></div>
+      <div class="tl-item reveal"><p class="when">2018&ndash;2025</p><p><strong>Co-founder and former Executive Director of CityServe</strong>, the Church united to serve its city; compassion at a scale only the whole Body can carry.</p></div>
       <div class="tl-item reveal"><p class="when">2020</p><p><strong>Operation 326 began</strong>: identifying the final frontier of unreached peoples.</p></div>
       <div class="tl-item reveal"><p class="when">Today</p><p><strong>Serves as Global Missions Director</strong> of the Pentecostal Church of God.</p></div>
     </div>
       <div class="reveal d1">
-        <div class="frame portrait"><img src="assets/portrait-warm.jpg" alt="Karl Hargestam" loading="lazy"></div>
+        <div class="frame portrait"><img src="assets/portrait-warm.jpg" width="1000" height="775" alt="Karl Hargestam, Global Missions Director, Pentecostal Church of God" loading="lazy"></div>
         <p class="caption">The Global Missions Director</p>
       </div>
     </div>
     <div class="strip">
-      <div class="frame reveal"><img src="https://raw.githubusercontent.com/karlhargestam-gif/karlhargestam-com/main/assets/hist-tent.jpg" alt="A campaign tent beside a local church" loading="lazy"></div>
-      <div class="frame reveal d1"><img src="https://raw.githubusercontent.com/karlhargestam-gif/karlhargestam-com/main/assets/hist-truck.jpg" alt="Early Joshua Campaign sound-stage truck" loading="lazy"></div>
-      <div class="frame reveal d2"><img src="https://raw.githubusercontent.com/karlhargestam-gif/karlhargestam-com/main/assets/heli-heritage-field.jpg" alt="A helicopter landing among a field crowd" loading="lazy"></div>
-      <div class="frame reveal d3"><img src="https://raw.githubusercontent.com/karlhargestam-gif/karlhargestam-com/main/assets/billboard-tamil.jpg" alt="A campaign billboard in India" loading="lazy"></div>
+      <div class="frame reveal"><img src="assets/hist-tent.jpg" width="1179" height="856" alt="A campaign tent beside a local church" loading="lazy"></div>
+      <div class="frame reveal d1"><img src="assets/hist-truck.jpg" width="1179" height="885" alt="Early Joshua Campaign sound-stage truck" loading="lazy"></div>
+      <div class="frame reveal d2"><img src="assets/heli-heritage-field.jpg" width="1179" height="727" alt="A helicopter landing among a field crowd" loading="lazy"></div>
+      <div class="frame reveal d3"><img src="assets/billboard-tamil.jpg" width="1179" height="786" alt="A campaign billboard in India" loading="lazy"></div>
     </div>
     <p class="caption reveal">The campaigns &mdash; tents, trucks, rotorcraft, and city streets</p>
   </div>
@@ -450,16 +464,16 @@ footer .base{border-top:1px solid #2c2c30;padding-top:24px;display:flex;justify-
     </div>
     <div class="row">
       <div class="reveal">
-        <div class="frame"><img src="assets/door-host.jpg" alt="Karl Hargestam received during an official visit" loading="lazy"></div>
+        <div class="frame"><img src="assets/door-host.jpg" width="1000" height="1037" alt="Karl Hargestam received during an official visit" loading="lazy"></div>
         <p class="caption">An official welcome &mdash; East Africa</p>
       </div>
       <div class="reveal d1">
-        <div class="frame"><img src="assets/door-senate.jpg" alt="California State Senate chamber display welcoming CityServe and Karl Hargestam" loading="lazy"></div>
-        <p class="caption">California State Senate &mdash; CityServe recognition</p>
+        <div class="frame"><img src="assets/door-senate.jpg" width="1000" height="750" alt="California State Senate chamber display welcoming CityServe and Karl Hargestam" loading="lazy"></div>
+        <p class="caption">Ministry history &mdash; California State Senate, CityServe recognition</p>
       </div>
       <div class="reveal d2">
-        <div class="frame"><img src="https://raw.githubusercontent.com/karlhargestam-gif/karlhargestam-com/main/assets/flags-table.jpg" alt="United States, Ukraine, and CityServe flags at a table" loading="lazy"></div>
-        <p class="caption">At the table &mdash; the United States, Ukraine, and CityServe</p>
+        <div class="frame"><img src="assets/flags-table.jpg" width="1179" height="885" alt="United States, Ukraine, and CityServe flags at a table" loading="lazy"></div>
+        <p class="caption">Ministry history &mdash; at the table, the United States, Ukraine, and CityServe</p>
       </div>
     </div>
     <p class="note reveal">A statesman is measured by the doors he was trusted to walk through &mdash; and what he carried through them.</p>

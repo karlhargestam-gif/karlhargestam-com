@@ -29,6 +29,7 @@ body{
   padding:48px 20px 64px;
 }
 .wrap{width:100%; max-width:430px; display:flex; flex-direction:column; align-items:center}
+picture{display:contents}
 .avatar{
   width:104px; height:104px; border-radius:50%; object-fit:cover;
   border:1px solid var(--line); margin-bottom:20px; background:#eee;
@@ -53,10 +54,25 @@ a.link:active{transform:translateY(0)}
 footer{margin-top:40px; font-size:12px; color:var(--muted); text-align:center; line-height:1.6}
 footer a{color:var(--ink-soft); text-decoration:none}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.karlhargestam.com/links/#webpage",
+  "url": "https://www.karlhargestam.com/links/",
+  "name": "Karl Hargestam — Links",
+  "description": "Karl Hargestam — Global Missions Director, Pentecostal Church of God. One Mission. One Movement. One Chance.",
+  "inLanguage": "en",
+  "isPartOf": { "@type": "WebSite", "@id": "https://www.karlhargestam.com/#website", "url": "https://www.karlhargestam.com/", "name": "Karl Hargestam" },
+  "about": { "@id": "https://www.karlhargestam.com/#person" },
+  "mainEntity": { "@type": "Person", "@id": "https://www.karlhargestam.com/#person", "name": "Karl Hargestam", "url": "https://www.karlhargestam.com/" },
+  "primaryImageOfPage": { "@type": "ImageObject", "url": "https://www.karlhargestam.com/assets/portrait-warm.jpg" }
+}
+</script>
 </head>
 <body>
 <div class="wrap">
-  <img class="avatar" src="../assets/portrait-warm.jpg" width="1000" height="775" alt="Karl Hargestam, Global Missions Director, Pentecostal Church of God">
+  <picture><source type="image/avif" srcset="../assets/portrait-warm-320.avif"><img class="avatar" src="../assets/portrait-warm.jpg" width="1000" height="775" alt="Karl Hargestam, Global Missions Director, Pentecostal Church of God"></picture>
   <h1>Karl Hargestam</h1>
   <p class="role">Global Missions Director · Pentecostal Church of God</p>
   <p class="motto">One Mission. One Movement. One Chance.</p>

@@ -33,6 +33,7 @@ html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-weight:400;line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 ::selection{background:var(--red);color:#fff}
 img{display:block;max-width:100%}
+picture{display:contents}
 a{color:inherit}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,4vw,48px)}
 .kicker{font-size:11px;font-weight:700;letter-spacing:.32em;text-transform:uppercase;color:var(--red);margin-bottom:20px}
@@ -157,7 +158,7 @@ nav.scrolled .brand,nav.scrolled .links a{color:var(--ink)}
 @media(max-width:900px){.film-grid{grid-template-columns:1fr;max-width:640px}}
 .film .screen{position:relative;aspect-ratio:16/9;background:#000;overflow:hidden;border-radius:12px}
 .film .screen iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.film h4{font-size:1.15rem;margin:16px 0 4px}
+.film h3{font-size:1.15rem;margin:16px 0 4px}
 .film .ep{font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:#8a8a93}
 .films .more{margin-top:44px}
 .films .textlink{color:#f2f2f5}
@@ -262,7 +263,7 @@ footer .base{border-top:1px solid #2c2c30;padding-top:24px;display:flex;justify-
 
 <header class="hero" id="top">
   <div class="bg">
-    <video autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster.jpg" width="1280" height="720">
+    <video autoplay muted loop playsinline preload="metadata" poster="assets/hero-poster-1268.webp" width="1280" height="720">
       <source src="assets/hero-loop.mp4" type="video/mp4">
     </video>
   </div>
@@ -285,11 +286,11 @@ footer .base{border-top:1px solid #2c2c30;padding-top:24px;display:flex;justify-
     <p class="lede reveal d1">Karl Hargestam serves as Global Missions Director of the Pentecostal Church of God, strengthening national churches and pioneer teams among the unreached.</p>
     <div class="duo">
       <div class="reveal">
-        <div class="frame wide"><img src="assets/tuxedo-podium.jpg" width="1179" height="787" alt="Karl Hargestam addressing a formal gathering" loading="lazy"></div>
+        <div class="frame wide"><picture><source type="image/avif" srcset="assets/tuxedo-podium-720.avif 720w, assets/tuxedo-podium-1179.avif 1179w" sizes="(max-width: 600px) 92vw, 1179px"><img src="assets/tuxedo-podium.jpg" width="1179" height="787" alt="Karl Hargestam addressing a formal gathering" loading="lazy"></picture></div>
         <p class="caption">A formal address</p>
       </div>
       <div class="reveal d1">
-        <div class="frame tall"><img src="assets/portrait-speaking.jpg" width="1170" height="780" alt="Karl Hargestam, PCG Global Missions Director, speaking" loading="lazy"></div>
+        <div class="frame tall"><picture><source type="image/avif" srcset="assets/portrait-speaking-720.avif 720w, assets/portrait-speaking-1170.avif 1170w" sizes="(max-width: 600px) 92vw, 1170px"><img src="assets/portrait-speaking.jpg" width="1170" height="780" alt="Karl Hargestam, PCG Global Missions Director, speaking" loading="lazy"></picture></div>
         <p class="caption">The Global Missions Director</p>
       </div>
     </div>
@@ -334,12 +335,12 @@ footer .base{border-top:1px solid #2c2c30;padding-top:24px;display:flex;justify-
         <a class="textlink reveal d2" href="https://pcg.org" target="_blank" rel="noopener">pcg.org &rarr;</a>
       </div>
       <div class="reveal d1">
-        <div class="frame"><img src="assets/crowd-aerial-joshua.jpg" width="1179" height="885" alt="Aerial view of a Joshua Campaign field gathering" loading="lazy"></div>
+        <div class="frame"><picture><source type="image/avif" srcset="assets/crowd-aerial-joshua-720.avif 720w, assets/crowd-aerial-joshua-1179.avif 1179w" sizes="(max-width: 600px) 92vw, 1179px"><img src="assets/crowd-aerial-joshua.jpg" width="1179" height="885" alt="Aerial view of a Joshua Campaign field gathering" loading="lazy"></picture></div>
         <p class="caption">The movement gathered &mdash; a Joshua Campaign field</p>
       </div>
     </div>
     <div class="reveal">
-      <div class="frame teamframe"><img src="assets/team-backs.jpg" width="1179" height="883" alt="Joshua Campaign missionary team" loading="lazy"></div>
+      <div class="frame teamframe"><picture><source type="image/avif" srcset="assets/team-backs-720.avif 720w, assets/team-backs-1179.avif 1179w" sizes="(max-width: 600px) 92vw, 1179px"><img src="assets/team-backs.jpg" width="1179" height="883" alt="Joshua Campaign missionary team" loading="lazy"></picture></div>
       <p class="caption">The missionary team &mdash; Joshua Campaign</p>
     </div>
   </div>
@@ -393,7 +394,7 @@ footer .base{border-top:1px solid #2c2c30;padding-top:24px;display:flex;justify-
     </div>
     <div class="wide">
       <div class="frame reveal"><video autoplay muted loop playsinline preload="metadata" width="960" height="540" title="Karl Hargestam in the cockpit"><source src="assets/cockpit-loop.mp4" type="video/mp4"></video></div>
-      <div class="frame reveal d1"><img src="assets/heli-red-n9117m.jpg" width="1179" height="885" alt="Mission One Eleven Aviation helicopter N9117M" loading="lazy"></div>
+      <div class="frame reveal d1"><picture><source type="image/avif" srcset="assets/heli-red-n9117m-720.avif 720w, assets/heli-red-n9117m-1179.avif 1179w" sizes="(max-width: 600px) 92vw, 1179px"><img src="assets/heli-red-n9117m.jpg" width="1179" height="885" alt="Mission One Eleven Aviation helicopter N9117M" loading="lazy"></picture></div>
     </div>
     <p class="caption reveal">In the cockpit &mdash; the pilot in pioneer service</p>
   </div>
@@ -420,15 +421,15 @@ footer .base{border-top:1px solid #2c2c30;padding-top:24px;display:flex;justify-
       <div class="tl-item reveal"><p class="when">Today</p><p><strong>Serves as Global Missions Director</strong> of the Pentecostal Church of God.</p></div>
     </div>
       <div class="reveal d1">
-        <div class="frame portrait"><img src="assets/portrait-warm.jpg" width="1000" height="775" alt="Karl Hargestam, Global Missions Director, Pentecostal Church of God" loading="lazy"></div>
+        <div class="frame portrait"><picture><source type="image/avif" srcset="assets/portrait-warm-720.avif 720w, assets/portrait-warm-1000.avif 1000w" sizes="(max-width: 600px) 92vw, 1000px"><img src="assets/portrait-warm.jpg" width="1000" height="775" alt="Karl Hargestam, Global Missions Director, Pentecostal Church of God" loading="lazy"></picture></div>
         <p class="caption">The Global Missions Director</p>
       </div>
     </div>
     <div class="strip">
-      <div class="frame reveal"><img src="assets/hist-tent.jpg" width="1179" height="856" alt="A campaign tent beside a local church" loading="lazy"></div>
-      <div class="frame reveal d1"><img src="assets/hist-truck.jpg" width="1179" height="885" alt="Early Joshua Campaign sound-stage truck" loading="lazy"></div>
-      <div class="frame reveal d2"><img src="assets/heli-heritage-field.jpg" width="1179" height="727" alt="A helicopter landing among a field crowd" loading="lazy"></div>
-      <div class="frame reveal d3"><img src="assets/billboard-tamil.jpg" width="1179" height="786" alt="A campaign billboard in India" loading="lazy"></div>
+      <div class="frame reveal"><picture><source type="image/avif" srcset="assets/hist-tent-720.avif 720w, assets/hist-tent-1179.avif 1179w" sizes="(max-width: 600px) 92vw, 1179px"><img src="assets/hist-tent.jpg" width="1179" height="856" alt="A campaign tent beside a local church" loading="lazy"></picture></div>
+      <div class="frame reveal d1"><picture><source type="image/avif" srcset="assets/hist-truck-720.avif 720w, assets/hist-truck-1179.avif 1179w" sizes="(max-width: 600px) 92vw, 1179px"><img src="assets/hist-truck.jpg" width="1179" height="885" alt="Early Joshua Campaign sound-stage truck" loading="lazy"></picture></div>
+      <div class="frame reveal d2"><picture><source type="image/avif" srcset="assets/heli-heritage-field-720.avif 720w, assets/heli-heritage-field-1179.avif 1179w" sizes="(max-width: 600px) 92vw, 1179px"><img src="assets/heli-heritage-field.jpg" width="1179" height="727" alt="A helicopter landing among a field crowd" loading="lazy"></picture></div>
+      <div class="frame reveal d3"><picture><source type="image/avif" srcset="assets/billboard-tamil-720.avif 720w, assets/billboard-tamil-1179.avif 1179w" sizes="(max-width: 600px) 92vw, 1179px"><img src="assets/billboard-tamil.jpg" width="1179" height="786" alt="A campaign billboard in India" loading="lazy"></picture></div>
     </div>
     <p class="caption reveal">The campaigns &mdash; tents, trucks, rotorcraft, and city streets</p>
   </div>
@@ -445,15 +446,15 @@ footer .base{border-top:1px solid #2c2c30;padding-top:24px;display:flex;justify-
     <div class="film-grid">
       <div class="film reveal">
         <div class="screen"><iframe src="https://www.youtube-nocookie.com/embed/Kv2HmDKY9Jk" title="Episode 1 — Mission One Eleven takes Ethiopia" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-        <p class="ep">Episode 1</p><h4>Mission One Eleven takes Ethiopia</h4>
+        <p class="ep">Episode 1</p><h3>Mission One Eleven takes Ethiopia</h3>
       </div>
       <div class="film reveal d1">
         <div class="screen"><iframe src="https://www.youtube-nocookie.com/embed/5a5uiTjnZLA" title="Episode 6 — We've Come in Peace" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-        <p class="ep">Episode 6</p><h4>We&rsquo;ve Come in Peace</h4>
+        <p class="ep">Episode 6</p><h3>We&rsquo;ve Come in Peace</h3>
       </div>
       <div class="film reveal d2">
         <div class="screen"><iframe src="https://www.youtube-nocookie.com/embed/2ZElpIsYFDE" title="Episode 7 — Miracles. Signs. Wonders." loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-        <p class="ep">Episode 7</p><h4>Miracles. Signs. Wonders.</h4>
+        <p class="ep">Episode 7</p><h3>Miracles. Signs. Wonders.</h3>
       </div>
     </div>
     <div class="more reveal"><a class="textlink" href="https://theassignmentshow.tv" target="_blank" rel="noopener">Watch all thirteen episodes &rarr;</a></div>
@@ -470,15 +471,15 @@ footer .base{border-top:1px solid #2c2c30;padding-top:24px;display:flex;justify-
     </div>
     <div class="row">
       <div class="reveal">
-        <div class="frame"><img src="assets/door-host.jpg" width="1000" height="1037" alt="Karl Hargestam received during an official visit" loading="lazy"></div>
+        <div class="frame"><picture><source type="image/avif" srcset="assets/door-host-720.avif 720w, assets/door-host-1000.avif 1000w" sizes="(max-width: 600px) 92vw, 1000px"><img src="assets/door-host.jpg" width="1000" height="1037" alt="Karl Hargestam received during an official visit" loading="lazy"></picture></div>
         <p class="caption">An official welcome &mdash; East Africa</p>
       </div>
       <div class="reveal d1">
-        <div class="frame"><img src="assets/door-senate.jpg" width="1000" height="750" alt="California State Senate chamber display welcoming CityServe and Karl Hargestam" loading="lazy"></div>
+        <div class="frame"><picture><source type="image/avif" srcset="assets/door-senate-720.avif 720w, assets/door-senate-1000.avif 1000w" sizes="(max-width: 600px) 92vw, 1000px"><img src="assets/door-senate.jpg" width="1000" height="750" alt="California State Senate chamber display welcoming CityServe and Karl Hargestam" loading="lazy"></picture></div>
         <p class="caption">Ministry history &mdash; California State Senate, CityServe recognition</p>
       </div>
       <div class="reveal d2">
-        <div class="frame"><img src="assets/flags-table.jpg" width="1179" height="885" alt="United States, Ukraine, and CityServe flags at a table" loading="lazy"></div>
+        <div class="frame"><picture><source type="image/avif" srcset="assets/flags-table-720.avif 720w, assets/flags-table-1179.avif 1179w" sizes="(max-width: 600px) 92vw, 1179px"><img src="assets/flags-table.jpg" width="1179" height="885" alt="United States, Ukraine, and CityServe flags at a table" loading="lazy"></picture></div>
         <p class="caption">Ministry history &mdash; at the table, the United States, Ukraine, and CityServe</p>
       </div>
     </div>

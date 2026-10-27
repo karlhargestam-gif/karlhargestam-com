@@ -45,10 +45,10 @@ h1,h2,h3,h4{font-weight:600;letter-spacing:-.022em;line-height:1.08}
 
 /* nav */
 nav{position:fixed;top:0;left:0;right:0;z-index:1000;transition:background .4s,box-shadow .4s,-webkit-backdrop-filter .4s}
-nav .bar{max-width:var(--maxw);margin:0 auto;padding:18px clamp(20px,4vw,48px);display:flex;justify-content:space-between;align-items:center}
+nav .bar{max-width:var(--maxw);margin:0 auto;padding:14px clamp(20px,4vw,48px);display:flex;justify-content:space-between;align-items:center;gap:18px}
 nav .brand{font-size:.95rem;font-weight:600;letter-spacing:.22em;color:#fff;text-decoration:none;transition:color .4s}
-nav .links{display:flex;gap:clamp(14px,2.4vw,32px)}
-nav .links a{color:#fff;text-decoration:none;font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;opacity:.85;transition:opacity .3s,color .4s}
+nav .links{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:clamp(8px,1.4vw,18px);row-gap:4px}
+nav .links a{color:#fff;text-decoration:none;font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;opacity:.85;transition:opacity .3s,color .4s}
 nav .links a:hover{opacity:1}
 nav.scrolled{background:rgba(251,251,253,.82);-webkit-backdrop-filter:saturate(1.8) blur(18px);backdrop-filter:saturate(1.8) blur(18px);box-shadow:0 1px 0 var(--line)}
 nav.scrolled .brand,nav.scrolled .links a{color:var(--ink)}
@@ -116,6 +116,7 @@ nav.scrolled .brand,nav.scrolled .links a{color:var(--ink)}
 .caption{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:14px}
 .textlink{display:inline-block;margin-top:24px;font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--red);padding-bottom:6px;transition:color .3s,border-color .3s}
 .textlink:hover{color:var(--red)}
+.director .textlink{color:#f2f2f5}
 
 /* assignments */
 .assign{background:var(--paper-2)}
@@ -199,61 +200,89 @@ footer .base{border-top:1px solid #2c2c30;padding-top:24px;display:flex;justify-
 }
 </style>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://www.karlhargestam.com/#person",
+  "name": "Karl Hargestam",
+  "jobTitle": "Global Missions Director",
+  "worksFor": {
+    "@id": "https://www.pcgmission.org/#organization"
+  },
+  "url": "https://www.karlhargestam.com/",
+  "alternateName": "Karl Härgestam",
+  "spouse": {
     "@type": "Person",
-    "@id": "https://www.karlhargestam.com/#person",
-    "name": "Karl Hargestam",
-    "jobTitle": "Global Missions Director",
-    "worksFor": {
-      "@type": "Organization",
-      "@id": "https://www.pcgmission.org/#organization",
-      "name": "Pentecostal Church of God Global Missions",
-      "url": "https://www.pcgmission.org/",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "2701 Brown Trail",
-        "addressLocality": "Bedford",
-        "addressRegion": "TX",
-        "postalCode": "76021",
-        "addressCountry": "US"
-      }
-    },
-    "url": "https://www.karlhargestam.com/",
-    "alternateName": "Karl Härgestam",
-    "spouse": { "@type": "Person", "name": "Jennifer Hargestam" },
-    "sameAs": [
-      "https://about.me/hargestam",
-      "https://www.linkedin.com/in/karl-hargestam-72327034",
-      "https://www.pcgmission.org/",
-      "https://www.pcg.org/about/leadership",
-      "https://www.pcg.org/resource-library/assembly-2025-commissioning-the-hargestams",
-      "https://hargestam.online/",
-      "https://grokipedia.com/page/karl-hargestam",
-      "https://ocfep.com/",
-      "https://www.imdb.com/name/nm5412265/",
-      "https://www.amazon.com/stores/author/B00IIVNT1K",
-      "https://www.pcg.org/authors/karl-hargestam",
-      "https://www.instagram.com/karlhargestam/",
-      "https://www.theassignmentbooks.com/",
-      "https://www.theassignmentshow.tv/"
-    ],
-    "subjectOf": { "@type": "TVSeries", "@id": "https://www.theassignmentshow.tv/#series", "name": "The Assignment: Ethiopia", "url": "https://www.theassignmentshow.tv/" },
-    "description": "Karl Hargestam serves as Global Missions Director of the Pentecostal Church of God. One Mission. One Movement. One Chance."
+    "name": "Jennifer Hargestam"
+  },
+  "sameAs": [
+    "https://about.me/hargestam",
+    "https://www.linkedin.com/in/karl-hargestam-72327034",
+    "https://www.pcgmission.org/",
+    "https://www.pcg.org/about/leadership",
+    "https://www.pcg.org/resource-library/assembly-2025-commissioning-the-hargestams",
+    "https://hargestam.online/",
+    "https://grokipedia.com/page/karl-hargestam",
+    "https://ocfep.com/",
+    "https://www.imdb.com/name/nm5412265/",
+    "https://www.amazon.com/stores/author/B00IIVNT1K",
+    "https://www.pcg.org/authors/karl-hargestam",
+    "https://www.instagram.com/karlhargestam/",
+    "https://www.theassignmentbooks.com/",
+    "https://www.theassignmentshow.tv/"
+  ],
+  "subjectOf": {
+    "@type": "TVSeries",
+    "@id": "https://www.theassignmentshow.tv/#series",
+    "name": "The Assignment: Ethiopia",
+    "url": "https://www.theassignmentshow.tv/"
+  },
+  "description": "Karl Hargestam serves as Global Missions Director of the Pentecostal Church of God. One Mission. One Movement. One Chance."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.pcgmission.org/#organization",
+  "name": "Pentecostal Church of God Global Missions",
+  "url": "https://www.pcgmission.org/",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2701 Brown Trl",
+    "addressLocality": "Bedford",
+    "addressRegion": "TX",
+    "postalCode": "76021-4103",
+    "addressCountry": "US"
   }
-  </script>
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.karlhargestam.com/#website",
+  "url": "https://www.karlhargestam.com/",
+  "name": "Karl Hargestam",
+  "inLanguage": "en",
+  "publisher": {
+    "@id": "https://www.karlhargestam.com/#person"
+  }
+}
+</script>
 </head>
 <body>
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
 
 <nav id="nav" aria-label="Primary">
   <div class="bar">
     <a class="brand" href="#top">KARL HARGESTAM</a>
     <div class="links">
-      <a href="#director">Director</a>
-      <a href="#mandate">Mandate</a>
-      <a href="#movement">Movement</a>
-      <a href="#assignments">Assignments</a>
-      <a href="#films">Films</a>
+      <a href="/about/">About</a>
+      <a href="/operation-326/">Operation 326</a>
+      <a href="/joshua-campaign/">Joshua</a>
+      <a href="/books-and-film/">Books</a>
+      <a href="/speaking/">Speaking</a>
       <a href="#office">Office</a>
     </div>
   </div>
@@ -283,6 +312,7 @@ footer .base{border-top:1px solid #2c2c30;padding-top:24px;display:flex;justify-
     <p class="kicker reveal">The Director</p>
     <h2 class="reveal d1">One Chance for Every Person</h2>
     <p class="lede reveal d1">Karl Hargestam serves as Global Missions Director of the Pentecostal Church of God, strengthening national churches and pioneer teams among the unreached.</p>
+    <p class="reveal d2"><a class="textlink" href="/about/">Full profile &rarr;</a></p>
     <div class="duo">
       <div class="reveal">
         <div class="frame wide"><picture><source type="image/avif" srcset="assets/tuxedo-podium-720.avif 720w, assets/tuxedo-podium-1179.avif 1179w" sizes="(max-width: 600px) 92vw, 1179px"><img src="assets/tuxedo-podium.jpg" width="1179" height="787" alt="Karl Hargestam addressing a formal gathering" loading="lazy"></picture></div>
@@ -300,13 +330,14 @@ footer .base{border-top:1px solid #2c2c30;padding-top:24px;display:flex;justify-
 <section class="sec mandate" id="mandate">
   <div class="wrap">
     <p class="kicker reveal">01 &mdash; The Mandate</p>
-    <p class="big reveal d1">Every person has a birthright to hear the Gospel at least once. Karl Hargestam serves the global movement of the Pentecostal Church of God as its Global Missions Director &mdash; <em>a servant of the movement, never its owner.</em> His assignment: to strengthen national churches and pioneer teams in the unfinished work among the unreached, until every tribe, tongue, and nation has had its chance.</p>
+    <p class="big reveal d1">Every person has a birthright to hear the Gospel at least once. Karl Hargestam serves the global movement of the Pentecostal Church of God as its Global Missions Director &mdash; <em>a servant of the movement, never its owner.</em></p>
+    <p class="reveal d2"><a class="textlink" href="/about/#mandate">The mandate &rarr;</a></p>
     <p class="reveal d2"><a class="go" href="https://www.pcg.org/missions/onechance#birthright" target="_blank" rel="noopener">Take the Birthright Pledge &rarr;</a></p>
   </div>
 </section>
 
 <!-- CHARTER -->
-<section class="sec charter">
+<section class="sec charter" id="charter">
   <div class="wrap">
     <p class="kicker on-dark reveal">02 &mdash; The Charter</p>
     <div class="grid">
@@ -326,21 +357,15 @@ footer .base{border-top:1px solid #2c2c30;padding-top:24px;display:flex;justify-
         <div class="sec-head reveal d1" style="margin-bottom:30px">
           <h2>A global fellowship, not a personal platform.</h2>
         </div>
-        <p class="reveal d1">Karl serves the <strong>Pentecostal Church of God</strong> &mdash; a worldwide fellowship whose formal conference family spans <strong>78 nations</strong>, within a heritage of ministry reaching more than 110 nations that is still being reconciled. Only what can be verified is reported.</p>
-        <p class="reveal d1">One Chance, rooted in his message, &ldquo;One Chance for Every Person,&rdquo; and Operation Uttermost form a global ministry and leadership effort spanning about <strong>110 nations</strong>.</p>
-        <p class="reveal d2">Karl Hargestam is Global Missions Director of the Pentecostal Church of God (PCG), serving together with Jennifer. He oversees PCG Global Missions, including the Pentecostal Theological Consortium (PTC, <a href="https://ptconline.global" target="_blank" rel="noopener">ptconline.global</a>), and is developing Operation Uttermost. He oversees PCG Global Missions, including One Chance, rooted in his message, &ldquo;One Chance for Every Person.&rdquo; He co-founded <a href="https://missiononeeleven.com/" target="_blank" rel="noopener">Mission One Eleven</a> with Jennifer.</p>
-        <p class="reveal d2">Growth here is decentralized by conviction: national movements leading their own nations, multiplying churches, training their own workers. <strong>OneChance schools</strong> are now spreading through PCG churches across the nations &mdash; fruit of the movement, belonging to the movement.</p>
-        <p class="reveal d2">One church in the Philippines has seen more than 3,600 baptisms so far, possibly past 5,600 if the baptisms expected in December happen.</p>
+        <p class="reveal d1">Karl serves the <strong>Pentecostal Church of God</strong> &mdash; a worldwide fellowship of national churches. He is Global Missions Director, serving together with Jennifer. Only what can be verified is reported.</p>
+        <p class="reveal d2"><a class="textlink" href="/about/#movement">The movement &rarr;</a></p>
         <a class="textlink reveal d2" href="https://pcg.org" target="_blank" rel="noopener">pcg.org &rarr;</a>
       </div>
       <div class="reveal d1">
         <div class="frame"><picture><source type="image/avif" srcset="assets/crowd-aerial-joshua-720.avif 720w, assets/crowd-aerial-joshua-1179.avif 1179w" sizes="(max-width: 600px) 92vw, 1179px"><img src="assets/crowd-aerial-joshua.jpg" width="1179" height="885" alt="Aerial view of a Joshua Campaign field gathering" loading="lazy"></picture></div>
         <p class="caption">The movement gathered &mdash; a Joshua Campaign field</p>
+        <p class="reveal"><a class="textlink" href="/joshua-campaign/">Joshua Campaign &rarr;</a></p>
       </div>
-    </div>
-    <div class="reveal">
-      <div class="frame teamframe"><picture><source type="image/avif" srcset="assets/team-backs-720.avif 720w, assets/team-backs-1179.avif 1179w" sizes="(max-width: 600px) 92vw, 1179px"><img src="assets/team-backs.jpg" width="1179" height="883" alt="Joshua Campaign missionary team" loading="lazy"></picture></div>
-      <p class="caption">The missionary team &mdash; Joshua Campaign</p>
     </div>
   </div>
 </section>
@@ -358,7 +383,7 @@ footer .base{border-top:1px solid #2c2c30;padding-top:24px;display:flex;justify-
         <p class="num">No. 1</p>
         <h3>Operation 326</h3>
         <p>In 2020 the movement began to identify the remaining unreached peoples &mdash; 326 groups with no known witness. The research phase is complete; the assignment continues.</p>
-        <a class="go" href="https://pcgmission.online" target="_blank" rel="noopener">Follow the evidence &rarr;</a>
+        <a class="go" href="/operation-326/">The assignment &rarr;</a><a class="go" href="https://www.pcgmission.org/" target="_blank" rel="noopener">Follow the evidence &rarr;</a>
       </div>
       <div class="card reveal d1">
         <p class="num">No. 2</p>
@@ -370,7 +395,7 @@ footer .base{border-top:1px solid #2c2c30;padding-top:24px;display:flex;justify-
         <p class="num">No. 3</p>
         <h3>Joshua Campaign International</h3>
         <p>Founded 1997. Mass evangelism across Africa &mdash; including Ethiopia, where evangelical faith grew from two percent to twenty.</p>
-        <a class="go" href="https://joshuacampaign.com" target="_blank" rel="noopener">joshuacampaign.com &rarr;</a>
+        <a class="go" href="/joshua-campaign/">The campaign &rarr;</a><a class="go" href="https://joshuacampaign.com" target="_blank" rel="noopener">joshuacampaign.com &rarr;</a>
       </div>
       <div class="card reveal d1">
         <p class="num">No. 4</p>
@@ -388,7 +413,7 @@ footer .base{border-top:1px solid #2c2c30;padding-top:24px;display:flex;justify-
         <p class="num">No. 6</p>
         <h3>The Assignment &mdash; Books &amp; Film</h3>
         <p>The documentary series and the books that carry the story of the pioneer work to the wider Church.</p>
-        <a class="go" href="https://theassignmentshow.tv" target="_blank" rel="noopener">The series &rarr;</a><a class="go" href="https://theassignmentbooks.com" target="_blank" rel="noopener">The books &rarr;</a>
+        <a class="go" href="/books-and-film/">Books and film &rarr;</a><a class="go" href="https://theassignmentshow.tv" target="_blank" rel="noopener">The series &rarr;</a><a class="go" href="https://theassignmentbooks.com" target="_blank" rel="noopener">The books &rarr;</a>
         <p style="margin-top:18px"><strong>New: <em>One Chance</em></strong> &mdash; the 2026 book, published by Messenger Publishing House.</p>
         <a class="go" style="margin-right:1.2em" href="https://www.amazon.com/dp/B0HHMVRT21" target="_blank" rel="noopener">Paperback &rarr;</a><a class="go" style="margin-right:1.2em" href="https://www.amazon.com/dp/B0HHK2XG72" target="_blank" rel="noopener">Kindle &rarr;</a><a class="go" href="https://www.pcg.org/product/one-chance" target="_blank" rel="noopener">PCG store &rarr;</a>
       </div>
@@ -409,30 +434,7 @@ footer .base{border-top:1px solid #2c2c30;padding-top:24px;display:flex;justify-
       <h2>The road here.</h2>
       <p class="lede">Stated plainly, as a matter of record. These were never sequential stops. PCG has carried through Helimission, Joshua Campaign, the farm, MOE, and CityServe alike, with One Chance for Every Person as the guiding light throughout.</p>
     </div>
-    <div class="hwrap">
-    <div class="timeline">
-      <div class="tl-item reveal"><p class="when">Sweden</p><p><strong>Born in Sweden</strong>, of Sami heritage on his grandmother&rsquo;s side &mdash; a heritage he still votes to uphold in the Sametinget.</p></div>
-      <div class="tl-item reveal"><p class="when">1989&ndash;1991</p><p><strong>At 21, left Sweden for pioneer evangelism in Africa.</strong> Missionary to Tanzania, building logistics support across Tanzania, Burundi, Rwanda, Uganda and Congo.</p></div>
-      <div class="tl-item reveal"><p class="when">1991&ndash;1997</p><p><strong>Earned his helicopter wings:</strong> commercial training, flight instructor in America, then regional director of Helimission Ethiopia, flying the Bell in pioneer service.</p></div><div class="tl-item reveal"><p class="when">1992</p><p><strong>Married Jennifer.</strong></p></div><div class="tl-item reveal"><p class="when">1993</p><p><strong>Ordained as a minister</strong> of the Pentecostal Church of God; mission appointment. PCG has carried every assignment since.</p></div>
-      <div class="tl-item reveal"><p class="when">1997</p><p><strong>Founded Joshua Campaign International</strong>; the first campaigns in Ethiopia. 4.2 million recorded decisions for Christ, and from 2007 an AStar helicopter serving Joshua Campaign Ethiopia, operated by Helimission.</p></div><div class="tl-item reveal"><p class="when">1999&ndash;2009</p><p><strong>Area supervisor, Pentecostal Church of God.</strong> Planted and established churches and denominations in Ethiopia and Kenya.</p></div>
-      <div class="tl-item reveal"><p class="when">OCFEP</p><p><strong>Founded One Chance for Every Person</strong>, serving as its president, the guiding light through every assignment.</p></div>
-      <div class="tl-item reveal"><p class="when">2008&ndash;2019</p><p><strong>Founder and co-owner, Joshua Flower Farms, Ethiopia.</strong> Commercial flower exports funding local church planters in the Horn of Africa.</p></div><div class="tl-item reveal"><p class="when">2010</p><p><strong>Founded Mission One Eleven</strong>; Founder, President and CEO. Expeditions, training, and aviation, flying the BO&nbsp;105.</p></div><div class="tl-item reveal"><p class="when">2016&ndash;2017</p><p><strong>Head of Mission, Swedish Pingst.</strong> Strategic oversight realigning national mission toward unreached peoples.</p></div>
-      <div class="tl-item reveal"><p class="when">2018&ndash;2025</p><p><strong>Co-founder and former Executive Director of CityServe</strong>, the Church united to serve its city; compassion at a scale only the whole Body can carry.</p></div>
-      <div class="tl-item reveal"><p class="when">2020</p><p><strong>Operation 326 began</strong>: identifying the final frontier of unreached peoples.</p></div>
-      <div class="tl-item reveal"><p class="when">Today</p><p><strong>Serves as Global Missions Director</strong> of the Pentecostal Church of God.</p></div>
-    </div>
-      <div class="reveal d1">
-        <div class="frame portrait"><picture><source type="image/avif" srcset="assets/portrait-warm-720.avif 720w, assets/portrait-warm-1000.avif 1000w" sizes="(max-width: 600px) 92vw, 1000px"><img src="assets/portrait-warm.jpg" width="1000" height="775" alt="Karl Hargestam, Global Missions Director, Pentecostal Church of God" loading="lazy"></picture></div>
-        <p class="caption">The Global Missions Director</p>
-      </div>
-    </div>
-    <div class="strip">
-      <div class="frame reveal"><picture><source type="image/avif" srcset="assets/hist-tent-720.avif 720w, assets/hist-tent-1179.avif 1179w" sizes="(max-width: 600px) 92vw, 1179px"><img src="assets/hist-tent.jpg" width="1179" height="856" alt="A campaign tent beside a local church" loading="lazy"></picture></div>
-      <div class="frame reveal d1"><picture><source type="image/avif" srcset="assets/hist-truck-720.avif 720w, assets/hist-truck-1179.avif 1179w" sizes="(max-width: 600px) 92vw, 1179px"><img src="assets/hist-truck.jpg" width="1179" height="885" alt="Early Joshua Campaign sound-stage truck" loading="lazy"></picture></div>
-      <div class="frame reveal d2"><picture><source type="image/avif" srcset="assets/heli-heritage-field-720.avif 720w, assets/heli-heritage-field-1179.avif 1179w" sizes="(max-width: 600px) 92vw, 1179px"><img src="assets/heli-heritage-field.jpg" width="1179" height="727" alt="A helicopter landing among a field crowd" loading="lazy"></picture></div>
-      <div class="frame reveal d3"><picture><source type="image/avif" srcset="assets/billboard-tamil-720.avif 720w, assets/billboard-tamil-1179.avif 1179w" sizes="(max-width: 600px) 92vw, 1179px"><img src="assets/billboard-tamil.jpg" width="1179" height="786" alt="A campaign billboard in India" loading="lazy"></picture></div>
-    </div>
-    <p class="caption reveal">The campaigns &mdash; tents, trucks, rotorcraft, and city streets</p>
+    <p class="reveal"><a class="textlink" href="/about/#history">The full record &rarr;</a></p>
   </div>
 </section>
 
@@ -444,21 +446,7 @@ footer .base{border-top:1px solid #2c2c30;padding-top:24px;display:flex;justify-
       <h2>The Assignment: Ethiopia</h2>
       <p class="lede">A thirteen-episode documentary series follows a pioneer team into the Ethiopian bush &mdash; adventure, danger, and the miraculous hand of God.</p>
     </div>
-    <div class="film-grid">
-      <div class="film reveal">
-        <div class="screen"><iframe src="https://www.youtube-nocookie.com/embed/Kv2HmDKY9Jk" title="Episode 1 — Mission One Eleven takes Ethiopia" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-        <p class="ep">Episode 1</p><h3>Mission One Eleven takes Ethiopia</h3>
-      </div>
-      <div class="film reveal d1">
-        <div class="screen"><iframe src="https://www.youtube-nocookie.com/embed/5a5uiTjnZLA" title="Episode 6 — We've Come in Peace" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-        <p class="ep">Episode 6</p><h3>We&rsquo;ve Come in Peace</h3>
-      </div>
-      <div class="film reveal d2">
-        <div class="screen"><iframe src="https://www.youtube-nocookie.com/embed/2ZElpIsYFDE" title="Episode 7 — Miracles. Signs. Wonders." loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-        <p class="ep">Episode 7</p><h3>Miracles. Signs. Wonders.</h3>
-      </div>
-    </div>
-    <div class="more reveal"><a class="textlink" href="https://theassignmentshow.tv" target="_blank" rel="noopener">Watch all thirteen episodes &rarr;</a></div>
+    <div class="more reveal"><a class="textlink" href="/books-and-film/">Books and film &rarr;</a></div>
   </div>
 </section>
 
@@ -470,21 +458,7 @@ footer .base{border-top:1px solid #2c2c30;padding-top:24px;display:flex;justify-
       <h2>Received as a servant.</h2>
       <p class="lede">Across the nations, doors have opened. They are noted here as legacy &mdash; never as endorsement.</p>
     </div>
-    <div class="row">
-      <div class="reveal">
-        <div class="frame"><picture><source type="image/avif" srcset="assets/door-host-720.avif 720w, assets/door-host-1000.avif 1000w" sizes="(max-width: 600px) 92vw, 1000px"><img src="assets/door-host.jpg" width="1000" height="1037" alt="Karl Hargestam received during an official visit" loading="lazy"></picture></div>
-        <p class="caption">An official welcome &mdash; East Africa</p>
-      </div>
-      <div class="reveal d1">
-        <div class="frame"><picture><source type="image/avif" srcset="assets/door-senate-720.avif 720w, assets/door-senate-1000.avif 1000w" sizes="(max-width: 600px) 92vw, 1000px"><img src="assets/door-senate.jpg" width="1000" height="750" alt="California State Senate chamber display welcoming CityServe and Karl Hargestam" loading="lazy"></picture></div>
-        <p class="caption">Ministry history &mdash; California State Senate, CityServe recognition</p>
-      </div>
-      <div class="reveal d2">
-        <div class="frame"><picture><source type="image/avif" srcset="assets/flags-table-720.avif 720w, assets/flags-table-1179.avif 1179w" sizes="(max-width: 600px) 92vw, 1179px"><img src="assets/flags-table.jpg" width="1179" height="885" alt="United States, Ukraine, and CityServe flags at a table" loading="lazy"></picture></div>
-        <p class="caption">Ministry history &mdash; at the table, the United States, Ukraine, and CityServe</p>
-      </div>
-    </div>
-    <p class="note reveal">A statesman is measured by the doors he was trusted to walk through &mdash; and what he carried through them.</p>
+    <p class="reveal"><a class="textlink" href="/speaking/">Speaking and doors opened &rarr;</a></p>
   </div>
 </section>
 
@@ -496,8 +470,8 @@ footer .base{border-top:1px solid #2c2c30;padding-top:24px;display:flex;justify-
         <p class="kicker">08 &mdash; Office</p>
         <h3>Correspondence.</h3>
         <address>
-          2705 Brown Trail, Suite 301<br>
-          Bedford, Texas 76021<br>
+          2701 Brown Trl<br>
+          Bedford, TX 76021-4103<br>
           <a href="tel:+18007451332">(800) 745-1332</a><br>
           <a href="mailto:info@ocfep.com">info@ocfep.com</a>
         </address>
@@ -526,9 +500,15 @@ footer .base{border-top:1px solid #2c2c30;padding-top:24px;display:flex;justify-
     <div class="top">
       <p class="fname">Karl Hargestam</p>
       <div class="flinks">
+        <a href="/about/">About</a>
+        <a href="/operation-326/">Operation 326</a>
+        <a href="/joshua-campaign/">Joshua Campaign</a>
+        <a href="/books-and-film/">Books &amp; Film</a>
+        <a href="/speaking/">Speaking</a>
+        <a href="/links/">Links</a>
         <a href="https://ocfep.com" target="_blank" rel="noopener">OCFEP</a>
         <a href="https://pcg.org" target="_blank" rel="noopener">PCG</a>
-        <a href="https://pcgmission.org" target="_blank" rel="noopener">PCG Mission</a>
+        <a href="https://www.pcgmission.org/" target="_blank" rel="noopener">PCG Mission</a>
         <a href="https://missiononeeleven.com/" target="_blank" rel="noopener">M111 US</a>
         <a href="https://missiononeeleven.se" target="_blank" rel="noopener">M111 SE</a>
         <a href="https://joshuacampaign.com" target="_blank" rel="noopener">Joshua Campaign</a>

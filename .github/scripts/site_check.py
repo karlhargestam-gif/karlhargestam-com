@@ -57,6 +57,11 @@ class PageParser(HTMLParser):
             self.refs.append(("href", a["href"]))
         elif tag in ("img", "source", "video", "audio", "track", "iframe") and a.get("src"):
             self.refs.append(("src", a["src"]))
+        if a.get("srcset"):
+            for part in a["srcset"].split(","):
+                url = part.strip().split()[0] if part.strip() else ""
+                if url:
+                    self.refs.append(("srcset", url))
         if tag in ("video",) and a.get("poster"):
             self.refs.append(("poster", a["poster"]))
 
@@ -113,6 +118,11 @@ def check(root, host, max_page_kb):
     errors, warnings = [], []
     root = os.path.abspath(root)
     pages = sorted(html_files(root))
+    titles, descriptions = {}, {}
+    required_copy = (
+        "Giving through this page goes directly to Karl Hargestam personally.",
+        "Online giving is being reconfigured.",
+    )
     if not pages:
         errors.append("no .html files found")
 
@@ -133,12 +143,52 @@ def check(root, host, max_page_kb):
         p = PageParser()
         p.feed(html)
 
+        low = html.lower()
+        if "pcgmission.online" in low:
+            errors.append(f"{rel}: still links to pcgmission.online")
+        if "2705" in html or "suite 301" in low:
+            errors.append(f"{rel}: old street address is still present")
+        if "finish the great commission" in low:
+            errors.append(f"{rel}: unapproved phrase “finish the Great Commission”")
+        if re.search(r"<(?:div|p|section|article)\b[^>]*\bhidden\b", html, re.I) or re.search(
+            r"<(?:div|p|section|article)\b[^>]*style=\"[^\"]*display:\s*none", html, re.I
+        ):
+            errors.append(f"{rel}: content is hidden; publish it on a real page instead")
+        h1s = re.findall(r"<h1\b[^>]*>.*?</h1>", html, re.I | re.S)
+        if len(h1s) != 1:
+            errors.append(f"{rel}: expected one h1, found {len(h1s)}")
+        title = re.search(r"<title>(.*?)</title>", html, re.I | re.S)
+        if not title or not title.group(1).strip():
+            errors.append(f"{rel}: missing <title>")
+        else:
+            t = re.sub(r"\s+", " ", title.group(1)).strip()
+            if t in titles:
+                errors.append(f"{rel}: title duplicates {titles[t]}")
+            titles[t] = rel
+        desc = (p.meta.get("description") or "").strip()
+        if not desc:
+            errors.append(f"{rel}: missing meta description")
+        elif desc in descriptions:
+            errors.append(f"{rel}: meta description duplicates {descriptions[desc]}")
+        else:
+            descriptions[desc] = rel
+        if rel.replace("\\", "/") == "links/index.html" and "noindex" not in (p.meta.get("robots") or "").lower():
+            errors.append("links/index.html must be noindex")
+        if rel == "index.html":
+            for sentence in required_copy:
+                if sentence not in html:
+                    errors.append(f"index.html is missing required sentence: {sentence}")
+            if "2701 Brown Trl" not in html or "76021-4103" not in html:
+                errors.append("index.html is missing the approved office address")
+
         if not p.canonicals:
             errors.append(f"{rel}: missing <link rel=\"canonical\">")
         for c in p.canonicals:
             cp = urlsplit(c)
             if cp.scheme != "https" or cp.hostname != host:
                 errors.append(f"{rel}: canonical {c!r} must be an absolute https URL on {host}")
+            elif cp.path != "/" and not cp.path.endswith("/"):
+                errors.append(f"{rel}: canonical path {cp.path!r} must end with /")
 
         for key in ("og:image", "twitter:image"):
             v = p.meta.get(key)
@@ -183,6 +233,19 @@ def check(root, host, max_page_kb):
             locs = [el.text.strip() for el in tree.iter() if el.tag.endswith("}loc") and el.text]
             if not locs:
                 errors.append("sitemap.xml lists no URLs")
+            required_locs = [
+                f"https://{host}/",
+                f"https://{host}/about/",
+                f"https://{host}/operation-326/",
+                f"https://{host}/joshua-campaign/",
+                f"https://{host}/books-and-film/",
+                f"https://{host}/speaking/",
+            ]
+            for req in required_locs:
+                if req not in locs:
+                    errors.append(f"sitemap.xml missing {req}")
+            if any(loc.rstrip("/").endswith("/links") for loc in locs):
+                errors.append("sitemap.xml must not list noindex /links/")
             for loc in locs:
                 if urlsplit(loc).hostname != host:
                     errors.append(f"sitemap.xml URL {loc!r} is not on {host}")
@@ -192,6 +255,37 @@ def check(root, host, max_page_kb):
                     errors.append(f"sitemap.xml URL {loc!r} has no matching page")
         except ET.ParseError as exc:
             errors.append(f"sitemap.xml is not valid XML ({exc})")
+
+    vercel_path = os.path.join(root, "vercel.json")
+    if not os.path.isfile(vercel_path):
+        errors.append("vercel.json is missing")
+    else:
+        try:
+            vercel = json.load(open(vercel_path, encoding="utf-8"))
+        except json.JSONDecodeError as exc:
+            errors.append(f"vercel.json is not valid JSON ({exc.msg})")
+            vercel = None
+        if isinstance(vercel, dict):
+            redirects = vercel.get("redirects") or []
+            sources = [r.get("source") for r in redirects]
+            if len(sources) != len(set(sources)):
+                errors.append("vercel.json has duplicate redirect sources")
+            index_rules = [r for r in redirects if r.get("source") == "/index.html"]
+            if index_rules != [{"source": "/index.html", "destination": "/", "statusCode": 301}]:
+                errors.append("vercel.json must 301 /index.html to /")
+            for rule in redirects:
+                if rule.get("statusCode") != 301:
+                    errors.append(f"vercel.json redirect {rule.get('source')!r} must be status 301")
+                    break
+                dest = rule.get("destination") or ""
+                path = urlsplit(dest).path if dest.startswith("/") else ""
+                if path and ":" not in path and path != "/":
+                    target = os.path.join(root, path.lstrip("/"))
+                    if not exists_as_page(os.path.normpath(target)):
+                        errors.append(f"vercel.json redirect {rule.get('source')!r} points at missing {dest}")
+            header_sources = {h.get("source") for h in vercel.get("headers") or []}
+            if "/links" not in header_sources:
+                errors.append("vercel.json must send X-Robots-Tag noindex for /links")
 
     return pages, errors, warnings
 

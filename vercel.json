@@ -1,0 +1,500 @@
+{
+  "trailingSlash": true,
+  "headers": [
+    {
+      "source": "/links",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, follow"
+        }
+      ]
+    },
+    {
+      "source": "/links/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, follow"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/:path+/index.html",
+      "destination": "/:path+/",
+      "statusCode": 301
+    },
+    {
+      "source": "/contact",
+      "destination": "/#office",
+      "statusCode": 301
+    },
+    {
+      "source": "/contact/",
+      "destination": "/#office",
+      "statusCode": 301
+    },
+    {
+      "source": "/give",
+      "destination": "/#office",
+      "statusCode": 301
+    },
+    {
+      "source": "/give/",
+      "destination": "/#office",
+      "statusCode": 301
+    },
+    {
+      "source": "/donate",
+      "destination": "/#office",
+      "statusCode": 301
+    },
+    {
+      "source": "/donate/",
+      "destination": "/#office",
+      "statusCode": 301
+    },
+    {
+      "source": "/partner",
+      "destination": "/#office",
+      "statusCode": 301
+    },
+    {
+      "source": "/partner/",
+      "destination": "/#office",
+      "statusCode": 301
+    },
+    {
+      "source": "/partnership",
+      "destination": "/#office",
+      "statusCode": 301
+    },
+    {
+      "source": "/partnership/",
+      "destination": "/#office",
+      "statusCode": 301
+    },
+    {
+      "source": "/bio",
+      "destination": "/about/",
+      "statusCode": 301
+    },
+    {
+      "source": "/bio/",
+      "destination": "/about/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ministry",
+      "destination": "/about/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ministry/",
+      "destination": "/about/",
+      "statusCode": 301
+    },
+    {
+      "source": "/press",
+      "destination": "/speaking/",
+      "statusCode": 301
+    },
+    {
+      "source": "/press/",
+      "destination": "/speaking/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events",
+      "destination": "/speaking/",
+      "statusCode": 301
+    },
+    {
+      "source": "/events/",
+      "destination": "/speaking/",
+      "statusCode": 301
+    },
+    {
+      "source": "/operation326",
+      "destination": "/operation-326/",
+      "statusCode": 301
+    },
+    {
+      "source": "/operation326/",
+      "destination": "/operation-326/",
+      "statusCode": 301
+    },
+    {
+      "source": "/joshua",
+      "destination": "/joshua-campaign/",
+      "statusCode": 301
+    },
+    {
+      "source": "/joshua/",
+      "destination": "/joshua-campaign/",
+      "statusCode": 301
+    },
+    {
+      "source": "/books",
+      "destination": "/books-and-film/",
+      "statusCode": 301
+    },
+    {
+      "source": "/books/",
+      "destination": "/books-and-film/",
+      "statusCode": 301
+    },
+    {
+      "source": "/films",
+      "destination": "/books-and-film/",
+      "statusCode": 301
+    },
+    {
+      "source": "/films/",
+      "destination": "/books-and-film/",
+      "statusCode": 301
+    },
+    {
+      "source": "/media",
+      "destination": "/books-and-film/",
+      "statusCode": 301
+    },
+    {
+      "source": "/media/",
+      "destination": "/books-and-film/",
+      "statusCode": 301
+    },
+    {
+      "source": "/shop",
+      "destination": "/books-and-film/",
+      "statusCode": 301
+    },
+    {
+      "source": "/shop/",
+      "destination": "/books-and-film/",
+      "statusCode": 301
+    },
+    {
+      "source": "/store",
+      "destination": "/books-and-film/",
+      "statusCode": 301
+    },
+    {
+      "source": "/store/",
+      "destination": "/books-and-film/",
+      "statusCode": 301
+    },
+    {
+      "source": "/resources",
+      "destination": "/books-and-film/",
+      "statusCode": 301
+    },
+    {
+      "source": "/resources/",
+      "destination": "/books-and-film/",
+      "statusCode": 301
+    },
+    {
+      "source": "/one-chance",
+      "destination": "/books-and-film/",
+      "statusCode": 301
+    },
+    {
+      "source": "/one-chance/",
+      "destination": "/books-and-film/",
+      "statusCode": 301
+    },
+    {
+      "source": "/onechance",
+      "destination": "/books-and-film/",
+      "statusCode": 301
+    },
+    {
+      "source": "/onechance/",
+      "destination": "/books-and-film/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog",
+      "destination": "https://hargestam.online/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/",
+      "destination": "https://hargestam.online/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/news",
+      "destination": "https://hargestam.online/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/news/",
+      "destination": "https://hargestam.online/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/articles",
+      "destination": "https://hargestam.online/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/articles/",
+      "destination": "https://hargestam.online/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/journal",
+      "destination": "https://hargestam.online/",
+      "statusCode": 301
+    },
+    {
+      "source": "/journal/",
+      "destination": "https://hargestam.online/",
+      "statusCode": 301
+    },
+    {
+      "source": "/podcast",
+      "destination": "https://hargestam.online/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/podcast/",
+      "destination": "https://hargestam.online/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/faq",
+      "destination": "https://hargestam.online/faq/",
+      "statusCode": 301
+    },
+    {
+      "source": "/faq/",
+      "destination": "https://hargestam.online/faq/",
+      "statusCode": 301
+    },
+    {
+      "source": "/testimonials",
+      "destination": "https://hargestam.online/testimonials/",
+      "statusCode": 301
+    },
+    {
+      "source": "/testimonials/",
+      "destination": "https://hargestam.online/testimonials/",
+      "statusCode": 301
+    },
+    {
+      "source": "/sample-page",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/sample-page/",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/feed",
+      "destination": "https://hargestam.online/feed/",
+      "statusCode": 301
+    },
+    {
+      "source": "/feed/",
+      "destination": "https://hargestam.online/feed/",
+      "statusCode": 301
+    },
+    {
+      "source": "/rss",
+      "destination": "https://hargestam.online/feed/",
+      "statusCode": 301
+    },
+    {
+      "source": "/rss/",
+      "destination": "https://hargestam.online/feed/",
+      "statusCode": 301
+    },
+    {
+      "source": "/comments/feed",
+      "destination": "https://hargestam.online/comments/feed/",
+      "statusCode": 301
+    },
+    {
+      "source": "/comments/feed/",
+      "destination": "https://hargestam.online/comments/feed/",
+      "statusCode": 301
+    },
+    {
+      "source": "/home",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/home/",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/index",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/index/",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/index.php",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/index.php/",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/:path*",
+      "destination": "https://hargestam.online/blog/:path*",
+      "statusCode": 301
+    },
+    {
+      "source": "/category/:path*",
+      "destination": "https://hargestam.online/category/:path*",
+      "statusCode": 301
+    },
+    {
+      "source": "/author/:path*",
+      "destination": "https://hargestam.online/author/:path*",
+      "statusCode": 301
+    },
+    {
+      "source": "/one-language-two-frontiers-what-the-idu-reveal-about-finishing-acts-18",
+      "destination": "https://hargestam.online/one-language-two-frontiers-what-the-idu-reveal-about-finishing-acts-18/",
+      "statusCode": 301
+    },
+    {
+      "source": "/one-language-two-frontiers-what-the-idu-reveal-about-finishing-acts-18/",
+      "destination": "https://hargestam.online/one-language-two-frontiers-what-the-idu-reveal-about-finishing-acts-18/",
+      "statusCode": 301
+    },
+    {
+      "source": "/no-language-is-too-small-for-the-gospel-the-daatsiin-and-the-reach-of-acts-18",
+      "destination": "https://hargestam.online/no-language-is-too-small-for-the-gospel-the-daatsiin-and-the-reach-of-acts-18/",
+      "statusCode": 301
+    },
+    {
+      "source": "/no-language-is-too-small-for-the-gospel-the-daatsiin-and-the-reach-of-acts-18/",
+      "destination": "https://hargestam.online/no-language-is-too-small-for-the-gospel-the-daatsiin-and-the-reach-of-acts-18/",
+      "statusCode": 301
+    },
+    {
+      "source": "/started-is-not-the-same-as-heard-the-bobongko-and-the-unfinished-witness",
+      "destination": "https://hargestam.online/started-is-not-the-same-as-heard-the-bobongko-and-the-unfinished-witness/",
+      "statusCode": 301
+    },
+    {
+      "source": "/started-is-not-the-same-as-heard-the-bobongko-and-the-unfinished-witness/",
+      "destination": "https://hargestam.online/started-is-not-the-same-as-heard-the-bobongko-and-the-unfinished-witness/",
+      "statusCode": 301
+    },
+    {
+      "source": "/the-unseen-millions-the-roma-of-the-balkans",
+      "destination": "https://hargestam.online/the-unseen-millions-the-roma-of-the-balkans/",
+      "statusCode": 301
+    },
+    {
+      "source": "/the-unseen-millions-the-roma-of-the-balkans/",
+      "destination": "https://hargestam.online/the-unseen-millions-the-roma-of-the-balkans/",
+      "statusCode": 301
+    },
+    {
+      "source": "/before-we-call-the-map-complete-the-boor-question-in-chad-and-mali",
+      "destination": "https://hargestam.online/before-we-call-the-map-complete-the-boor-question-in-chad-and-mali/",
+      "statusCode": 301
+    },
+    {
+      "source": "/before-we-call-the-map-complete-the-boor-question-in-chad-and-mali/",
+      "destination": "https://hargestam.online/before-we-call-the-map-complete-the-boor-question-in-chad-and-mali/",
+      "statusCode": 301
+    },
+    {
+      "source": "/across-the-strait-the-kumzari-and-the-last-mile-of-acts-18",
+      "destination": "https://hargestam.online/across-the-strait-the-kumzari-and-the-last-mile-of-acts-18/",
+      "statusCode": 301
+    },
+    {
+      "source": "/across-the-strait-the-kumzari-and-the-last-mile-of-acts-18/",
+      "destination": "https://hargestam.online/across-the-strait-the-kumzari-and-the-last-mile-of-acts-18/",
+      "statusCode": 301
+    },
+    {
+      "source": "/closer-to-completion-what-this-weeks-operation-326-research-is-revealing",
+      "destination": "https://hargestam.online/closer-to-completion-what-this-weeks-operation-326-research-is-revealing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/closer-to-completion-what-this-weeks-operation-326-research-is-revealing/",
+      "destination": "https://hargestam.online/closer-to-completion-what-this-weeks-operation-326-research-is-revealing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/operation-326-why-the-last-unreached-peoples-still-matter",
+      "destination": "https://hargestam.online/operation-326-why-the-last-unreached-peoples-still-matter/",
+      "statusCode": 301
+    },
+    {
+      "source": "/operation-326-why-the-last-unreached-peoples-still-matter/",
+      "destination": "https://hargestam.online/operation-326-why-the-last-unreached-peoples-still-matter/",
+      "statusCode": 301
+    },
+    {
+      "source": "/the-last-mile-why-pentecostal-identity-is-a-geopolitical-subpoena",
+      "destination": "https://hargestam.online/the-last-mile-why-pentecostal-identity-is-a-geopolitical-subpoena/",
+      "statusCode": 301
+    },
+    {
+      "source": "/the-last-mile-why-pentecostal-identity-is-a-geopolitical-subpoena/",
+      "destination": "https://hargestam.online/the-last-mile-why-pentecostal-identity-is-a-geopolitical-subpoena/",
+      "statusCode": 301
+    },
+    {
+      "source": "/166-2",
+      "destination": "https://hargestam.online/166-2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/166-2/",
+      "destination": "https://hargestam.online/166-2/",
+      "statusCode": 301
+    },
+    {
+      "source": "/the-church-doesnt-need-more-content-it-needs-a-clearer-signal",
+      "destination": "https://hargestam.online/the-church-doesnt-need-more-content-it-needs-a-clearer-signal/",
+      "statusCode": 301
+    },
+    {
+      "source": "/the-church-doesnt-need-more-content-it-needs-a-clearer-signal/",
+      "destination": "https://hargestam.online/the-church-doesnt-need-more-content-it-needs-a-clearer-signal/",
+      "statusCode": 301
+    },
+    {
+      "source": "/more-than-a-headline-the-fulani-and-the-witness-carried-by-their-own",
+      "destination": "https://hargestam.online/more-than-a-headline-the-fulani-and-the-witness-carried-by-their-own/",
+      "statusCode": 301
+    },
+    {
+      "source": "/more-than-a-headline-the-fulani-and-the-witness-carried-by-their-own/",
+      "destination": "https://hargestam.online/more-than-a-headline-the-fulani-and-the-witness-carried-by-their-own/",
+      "statusCode": 301
+    }
+  ]
+}

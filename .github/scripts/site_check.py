@@ -99,6 +99,8 @@ def resolve(root, page_path, url, host):
         if not path:
             return None
     path = unquote(path)
+    if path.startswith("/_vercel/"):
+        return None  # served by the Vercel platform (Web Analytics), not a repo file
     if path.startswith("/"):
         target = os.path.join(root, path.lstrip("/"))
     else:
@@ -146,7 +148,7 @@ def check(root, host, max_page_kb):
         low = html.lower()
         if "pcgmission.online" in low:
             errors.append(f"{rel}: still links to pcgmission.online")
-        if "2705" in html or "suite 301" in low:
+        if "2701 brown" in low or "suite 301" in low:
             errors.append(f"{rel}: old street address is still present")
         if "finish the great commission" in low:
             errors.append(f"{rel}: unapproved phrase “finish the Great Commission”")
@@ -178,7 +180,7 @@ def check(root, host, max_page_kb):
             for sentence in required_copy:
                 if sentence not in html:
                     errors.append(f"index.html is missing required sentence: {sentence}")
-            if "2701 Brown Trl" not in html or "76021-4103" not in html:
+            if "2705 Brown Trl" not in html or "76021" not in html:
                 errors.append("index.html is missing the approved office address")
 
         if not p.canonicals:

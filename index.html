@@ -495,6 +495,49 @@ footer .base{border-top:1px solid #2c2c30;padding-top:24px;display:flex;justify-
 
 </main>
 
+<!-- Email sign-up block. PREVIEW ONLY: not connected to Mailchimp yet. The audience must be confirmed by Karl before the form action is set. -->
+<section class="signup-block" id="sign-up" aria-labelledby="signup-title">
+  <style>
+    .signup-block{background:#f4f4f2;color:#111111;padding:clamp(2.5rem,6vw,4.5rem) 1.25rem;font-family:inherit}
+    .signup-block *{box-sizing:border-box}
+    .signup-block__inner{max-width:1080px;margin:0 auto;display:grid;gap:clamp(1.5rem,4vw,3.5rem);grid-template-columns:1fr;align-items:center}
+    @media (min-width:820px){.signup-block__inner{grid-template-columns:1fr 1.1fr}}
+    .signup-block__eyebrow{margin:0 0 .6rem;font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#c8102e}
+    .signup-block h2{margin:0 0 .75rem;font-family:inherit;font-size:clamp(1.7rem,3.4vw,2.5rem);line-height:1.1;font-weight:800;letter-spacing:-.02em;color:#111111}
+    .signup-block__copy p.signup-block__body{margin:0;font-size:1.05rem;line-height:1.55;color:#555555}
+    .signup-block__form{display:grid;gap:.75rem;grid-template-columns:1fr}
+    @media (min-width:560px){.signup-block__form{grid-template-columns:1fr 1.3fr auto}}
+    .signup-block__field{display:flex;flex-direction:column;gap:.35rem}
+    .signup-block label{font-size:.8rem;font-weight:600;color:#555555}
+    .signup-block input[type=text],.signup-block input[type=email]{width:100%;min-height:48px;padding:.7rem .85rem;font:inherit;font-size:1rem;color:#111111;background:#ffffff;border:1px solid #d4d4d4;border-radius:6px}
+    .signup-block input:focus-visible{outline:2px solid #c8102e;outline-offset:1px;border-color:#c8102e}
+    .signup-block button{align-self:end;min-height:48px;padding:.7rem 1.4rem;font:inherit;font-size:1rem;font-weight:700;color:#fff;background:#c8102e;border:0;border-radius:6px;cursor:pointer}
+    .signup-block button:hover{filter:brightness(.92)}
+    .signup-block button:focus-visible{outline:2px solid #111111;outline-offset:2px}
+    .signup-block__note,.signup-block__status{grid-column:1/-1;margin:0;font-size:.85rem;color:#555555}
+    .signup-block__status:empty{display:none}
+    .signup-block__status{color:#111111;font-weight:600}
+    .signup-block__hp{position:absolute;left:-5000px}
+  </style>
+  <div class="signup-block__inner">
+    <div class="signup-block__copy">
+      <p class="signup-block__eyebrow">Email updates</p>
+      <h2 id="signup-title">Follow the work</h2>
+      <p class="signup-block__body">Stories from the field, prayer needs, and new books and films from Karl Hargestam and PCG Global Missions.</p>
+    </div>
+    <form class="signup-block__form" action="#mailchimp-action-pending" method="post" data-preview-only="true">
+      <div class="signup-block__field"><label for="signup-fname">First name</label><input id="signup-fname" type="text" name="FNAME" autocomplete="given-name"></div>
+      <div class="signup-block__field"><label for="signup-email">Email address</label><input id="signup-email" type="email" name="EMAIL" required autocomplete="email" inputmode="email"></div>
+      <div class="signup-block__hp"><input type="text" name="b_pending" tabindex="-1" value="" autocomplete="off" aria-hidden="true"></div>
+      <button type="submit">Sign up</button>
+      <p class="signup-block__note">A few emails a month. Unsubscribe anytime.</p>
+      <p class="signup-block__status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+  <script>
+    (function(){var f=document.querySelector('.signup-block__form[data-preview-only]');if(!f)return;f.addEventListener('submit',function(e){e.preventDefault();var s=f.querySelector('.signup-block__status'),em=f.querySelector('#signup-email');if(!em.checkValidity()){s.textContent='Please enter a valid email address.';em.focus();return;}s.textContent='Thanks! (Preview only: this form is not connected yet, so nothing was sent.)';f.reset();});})();
+  </script>
+</section>
 <footer>
   <div class="wrap">
     <div class="top">

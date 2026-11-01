@@ -528,7 +528,7 @@ footer .base{border-top:1px solid #2c2c30;padding-top:24px;display:flex;justify-
     <form class="signup-block__form" action="#mailchimp-action-pending" method="post" data-preview-only="true">
       <div class="signup-block__field"><label for="signup-fname">First name</label><input id="signup-fname" type="text" name="FNAME" autocomplete="given-name"></div>
       <div class="signup-block__field"><label for="signup-email">Email address</label><input id="signup-email" type="email" name="EMAIL" required autocomplete="email" inputmode="email"></div>
-      <div class="signup-block__hp" aria-hidden="true"><input type="text" name="b_pending" tabindex="-1" value=""></div>
+      <div class="signup-block__hp"><input type="text" name="b_pending" tabindex="-1" value="" autocomplete="off" aria-hidden="true"></div>
       <button type="submit">Sign up</button>
       <p class="signup-block__note">A few emails a month. Unsubscribe anytime.</p>
       <p class="signup-block__status" role="status" aria-live="polite"></p>

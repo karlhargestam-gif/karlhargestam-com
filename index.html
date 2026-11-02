@@ -59,18 +59,18 @@ nav.scrolled .brand,nav.scrolled .links a{color:var(--ink)}
 .hero .bg{position:absolute;inset:0}
 .hero .bg video{width:100%;height:100%;object-fit:cover;object-position:center 32%;filter:saturate(.92) brightness(.62) contrast(1.05)}
 .hero .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,6,8,.5) 0%,rgba(6,6,8,.14) 44%,rgba(6,6,8,.82) 100%)}
-.hero .inner{position:relative;z-index:2;width:100%;padding-bottom:clamp(56px,9vh,100px)}
+.hero .inner{position:relative;z-index:2;width:100%;padding-bottom:clamp(28px,5vh,64px)}
 .hero .kicker{color:#e5b3ba}
-.hero h1{color:#fff;font-size:clamp(3rem,9vw,6.8rem);font-weight:700;letter-spacing:-.032em}
+.hero h1{color:#fff;font-size:clamp(2rem,5.2vw,4rem);font-weight:700;letter-spacing:-.028em}
 .hero .tri{margin-top:18px;color:#fff;font-size:clamp(1rem,2.2vw,1.35rem);font-weight:500;letter-spacing:.02em;opacity:.94}
 .hero .tri .dot{color:var(--red);margin:0 .55em}
 .hero .scroll{position:absolute;right:clamp(20px,4vw,48px);bottom:32px;z-index:2;color:#fff;font-size:10px;letter-spacing:.32em;text-transform:uppercase;opacity:.6;writing-mode:vertical-rl}
 @media(max-width:760px){
-  .hero{align-items:center}
-  .hero .inner{text-align:center;padding-bottom:0;padding-top:10vh}
+  .hero{align-items:flex-end}
+  .hero .inner{text-align:center;padding-top:0;padding-bottom:calc(36px + env(safe-area-inset-bottom))}
   .hero .bg video{object-position:center 38%}
-  .hero h1{font-size:clamp(2.7rem,14.5vw,4.4rem)}
-  .hero .tri{font-size:1.02rem}
+  .hero h1{font-size:clamp(1.9rem,9vw,2.7rem)}
+  .hero .tri{font-size:.94rem}
   .hero .scroll{display:none}
 }
 
